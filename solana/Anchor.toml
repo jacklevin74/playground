@@ -1,0 +1,21 @@
+[toolchain]
+anchor_version = "0.30.0"
+
+[features]
+skip-lint = false
+seeds = true
+
+[programs.devnet]
+# sol_xen_minter = "7Ltcx8X3twQnfYtmCs3C6PTUPhPcZkr1opEoxjFz4xDN"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "http://xolana.xen.network:8899"
+# cluster = "devnet"
+# cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
